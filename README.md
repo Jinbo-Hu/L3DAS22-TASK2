@@ -119,6 +119,8 @@ sh ./scripts/train.sh
 
 `--num_workers` affects the training speed, adjust it according to your resources.
 
+The training is on two NVIDIA Geforce RTX 3090 GPUs. If you have GPU memory error, try to reduce the batch size. Only training with GPU is supported.
+
 ### 3. Inference
 
 Inference predicts results and save to `./out_infer` folder. The saved results is the submission result for L3DAS22 challenge. Directly run
@@ -174,6 +176,12 @@ The Performance of our proposed data augmentation and track-wise ensemble model 
 
 <img src="images/Table2.jpg" width="500">
 
+## FAQs
+If you have any question, please email to hujinbo2019@gmail.com or report an issue here.
+
+If you came across out of memory error, then try to reduce the batch size.
+
+After downloading, you can delete downloaded_packages folder to save some space.
 
 ## Cite
 
@@ -181,14 +189,10 @@ Please consider citing our paper if you find this code useful for your research.
 
 [1]. Jinbo Hu, Yin Cao, Ming Wu, Qiuqiang Kong, Feiran Yang,  Mark D. Plumbley, and Jun Yang, “A Track-Wise Ensemble Event Independent Network for Polyphonic Sound Event Localization and Detection”, submitted for publication.
 
-## FAQs
-If you have any question, please email to hujinbo2019@gmail.com or report an issue here.
-If you came across out of memory error, then try to reduce the batch size.
-After downloading, you can delete downloaded_packages folder to save some space.
 
 ### Reference
 
-[2]. Yin Cao, Turab Iqbal, Qiuqiang Kong, Fengyan An, Wenwu Wang, Mark D. Plumbley, “An improved event-independent network for polyphonic sound event localization and detection,” in Proc. IEEE ICASSP 2021, 2021, pp. 885–889.
+[2]. Yin Cao, Turab Iqbal, Qiuqiang Kong, Fengyan An, Wenwu Wang, Mark D. Plumbley, “An improved event-independent network for polyphonic sound event localization and detection,” in Proc. IEEE ICASSP 2021, 2021, pp. 885–889. [*URL*](https://arxiv.org/abs/2010.13092)
 
 ```
 @inproceedings{cao2021,  
@@ -200,7 +204,7 @@ After downloading, you can delete downloaded_packages folder to save some space.
     }
 ```
 
-[3]. Yin Cao, Turab Iqbal, Qiuqiang Kong, Yue Zhong, Wenwu Wang, Mark D. Plumbley, “Event-independent network for polyphonic sound event localization and detection,” in Proc. DCASE 2020 Workshop, 2020, pp. 11–15.
+[3]. Yin Cao, Turab Iqbal, Qiuqiang Kong, Yue Zhong, Wenwu Wang, Mark D. Plumbley, “Event-independent network for polyphonic sound event localization and detection,” in Proc. DCASE 2020 Workshop, 2020, pp. 11–15. [*URL*](https://arxiv.org/abs/2010.00140)
 
 ```
 @inproceedings{cao2020event,    
