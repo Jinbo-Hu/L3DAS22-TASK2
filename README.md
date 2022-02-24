@@ -190,7 +190,7 @@ Please consider citing our paper if you find this code useful for your research.
 [1]. Jinbo Hu, Yin Cao, Ming Wu, Qiuqiang Kong, Feiran Yang,  Mark D. Plumbley, and Jun Yang, “A Track-Wise Ensemble Event Independent Network for Polyphonic Sound Event Localization and Detection”, submitted for publication.
 
 
-### Reference
+## Reference
 
 [2]. Yin Cao, Turab Iqbal, Qiuqiang Kong, Fengyan An, Wenwu Wang, Mark D. Plumbley, “An improved event-independent network for polyphonic sound event localization and detection,” in Proc. IEEE ICASSP 2021, 2021, pp. 885–889. [*URL*](https://arxiv.org/abs/2010.13092)
 

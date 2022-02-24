@@ -101,7 +101,7 @@ class ConvConformer(nn.Module):
 
     def forward(self, x):
         """
-        x: waveform, (batch_size, num_channels, data_length)
+        x: spectrogram, (batch_size, num_channels, num_frames, num_freqBins)
         """
         if self.cfg['data']['num_foa'] == 1:
             x_sed = x[:, :4]
