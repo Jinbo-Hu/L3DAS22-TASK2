@@ -5,12 +5,12 @@ class l3das22:
 
     '''
     def __init__(self, root_dir, cfg):
-        self.root_dir = Path(root_dir)
+        self.root_dir = Path(root_dir).joinpath(cfg['dataset'])
         self.dataset_dir = dict()
         self.dataset_dir['task2'] = {
             'dev' : self.root_dir.joinpath('L3DAS22_Task2_dev').joinpath('L3DAS22_Task2_dev'),
             'train' : self.root_dir.joinpath('L3DAS22_Task2_train').joinpath('L3DAS22_Task2_train'),
-            'test' : self.root_dir.joinpath('L3DAS22_Task2_test')
+            'test' : self.root_dir.joinpath('L3DAS22_Task2_test').joinpath('L3DAS22_Task2_test')
         }
         self.label_set_task2 = ['Computer_keyboard', 'Drawer_open_or_close', 'Cupboard_open_or_close', \
             'Finger_snapping', 'Keys_jangling', 'Knock', 'Laughter', 'Scissors', 'Telephone', \
@@ -49,7 +49,7 @@ class l3das21:
 
     '''
     def __init__(self, root_dir, cfg):
-        self.root_dir = Path(root_dir)
+        self.root_dir = Path(root_dir).joinpath(cfg['dataset'])
         self.dataset_dir = dict()
         self.dataset_dir['task2'] = {
             'dev' : self.root_dir.joinpath('Task2').joinpath('L3DAS_Task2_dev'),

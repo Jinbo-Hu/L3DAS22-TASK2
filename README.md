@@ -41,53 +41,37 @@ conda activate l3das22
 ```
 
 ## Dataset
+Download dataset is easy. Directly run
+```shell
+sh scripts/download.sh
+```
 
-The dataset can be downloaded from  [*L3DAS21 Dataset*](https://zenodo.org/record/4642005#.Yg420K_itm8) and [*L3DAS22 Dataset*](https://www.kaggle.com/l3dasteam/l3das22). Download and unzip the data, the directory of two datasets looks like:
-
-<pre>
-./dataset_l3das22
-├── L3DAS22_Task2_dev
-│   └── L3DAS22_Task2_dev
-│       ├── data (300 files)
-│       │   ├── split4_ov1_0_A.wav
-│       │   ├── split4_ov1_0_B.wav
-│       │   └── ...
-│       │
-│       └── labels (150 files)
-│            ├── label_split4_ov1_0.csv
-│            ├── label_split4_ov1_1.csv
-│            └── ...
-│
-├── L3DAS22_Task2_test
-│   ├── data
-│   └── labels
-│
-└── L3DAS22_Task2_train
-     └── L3DAS22_Task2_train
-          ├── data
-          └── labels
-</pre>
-
+The dataset can be downloaded from  [*L3DAS21 Dataset*](https://zenodo.org/record/4642005#.Yg420K_itm8) (Optional) and [*L3DAS22 Dataset*](https://www.kaggle.com/l3dasteam/l3das22). Download and unzip the data, the directory of two datasets looks like:
 
 <pre>
-./dataset_l3das21
-├── L3DAS_Task2_dev
-│   ├── data (300 files)
-│   │   ├── split4_ov1_0_A.wav
-│   │   ├── split4_ov1_0_B.wav
-│   │   └── ...
-│   │
-│   └── labels (150 files)
-│  	   ├── label_split4_ov1_0.csv
-│  	   ├── label_split4_ov1_1.csv
-│  	   └── ...
-│   
-├── L3DAS_Task2_test
-│   └── data
-│   
-└── L3DAS_Task2_train
-    ├── data
-    └── labels
+./dataset
+├────l3das22
+│        ├── L3DAS22_Task2_dev
+│        │   └── L3DAS22_Task2_dev
+│        │       ├── data
+│        │       └── labels
+│        ├── L3DAS22_Task2_test
+│        │   └── L3DAS22_Task2_test
+│        │       ├── data
+│        │       └── labels
+│        └── L3DAS22_Task2_train
+│            └── L3DAS22_Task2_train
+│                ├── data
+│                └── labels
+└────l3das21
+        ├── L3DAS_Task2_dev
+        │   ├── data
+        │   └── labels
+        ├── L3DAS_Task2_test
+        │   └── data
+        └── L3DAS_Task2_train
+            ├── data
+            └── labels
 </pre>
 
 

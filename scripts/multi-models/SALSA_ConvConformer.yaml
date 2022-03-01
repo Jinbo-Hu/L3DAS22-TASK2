@@ -1,7 +1,7 @@
 method: ein_seld
 dataset: l3das22 # l3das21 | l3das22
 workspace_dir: ./
-dataset_dir: /mnt/hjb/Dataset/L3DAS22/dataset 
+dataset_dir: ./dataset 
 hdf5_dir: ./_hdf5
 task: seld # seld 
 data:

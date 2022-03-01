@@ -2,6 +2,7 @@
 /results/
 /parameter/
 /_hdf5
+/dataset
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
