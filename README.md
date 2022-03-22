@@ -171,7 +171,7 @@ After downloading, you can delete downloaded_packages folder to save some space.
 
 Please consider citing our paper if you find this code useful for your research. 
 
-[1]. Jinbo Hu, Yin Cao, Ming Wu, Qiuqiang Kong, Feiran Yang,  Mark D. Plumbley, and Jun Yang, “A Track-Wise Ensemble Event Independent Network for Polyphonic Sound Event Localization and Detection”, submitted for publication.
+[*[1]. Jinbo Hu, Yin Cao, Ming Wu, Qiuqiang Kong, Feiran Yang,  Mark D. Plumbley, and Jun Yang, “A Track-Wise Ensemble Event Independent Network for Polyphonic Sound Event Localization and Detection”, submitted for publication.*](https://arxiv.org/abs/2203.10228)
 
 
 ## Reference
