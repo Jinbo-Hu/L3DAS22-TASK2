@@ -144,15 +144,15 @@ sh ./scripts/multi-models/evaluate_models.sh # This step is optional.
 
 ### 3. Track-wise ensemble model
 
-This part is not yet fully ready. We will release codes of this part as soon as possible.
+This part is not yet fully ready. We will release codes for this part as soon as possible.
 
 ## Data augmentation
 
-This part is also not yet fully completed. We will also release codes of this part as soon as possible.
+We update the data augmentation chains in this [repo](https://github.com/Jinbo-Hu/PSELDNets).
 
 ## Results
 
-The performance of our proposed single models on validation set.
+The performance of our proposed single models on the validation set.
 
 <img src="images/Table1.jpg" width="1000">
 
