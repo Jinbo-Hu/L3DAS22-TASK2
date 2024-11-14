@@ -8,13 +8,13 @@ For more information about the challenge, please refer to [*L3DAS22 website*](ht
 
 ## Introduction
 
-This is a PyTorch implementation of proposed method.
+This is a PyTorch implementation of the proposed method.
 
-We have proposed a track-wise ensemble event independent network with a novel data augmentation approach for 3D polyphonic sound event localization and detection.  For more information, please read papers [hear](*Citing*).
+We have proposed a track-wise ensemble event-independent network with a novel data augmentation approach for 3D polyphonic sound event localization and detection.  For more information, please read papers [hear](*Citing*).
 
 The features of this method are following:
 
--  The proposed model is based on our previous proposed Event-Independent Network V2 [2,3] and is extended by conformer blocks and dense blocks. 
+-  The proposed model is based on our previously proposed Event-Independent Network V2 [2,3] and is extended by conformer blocks and dense blocks. 
 
 -  The track-wise ensemble model with track-wise output format is proposed to solve an ensemble model problem for track-wise output format that track permutation may occur among different models. 
 
@@ -34,14 +34,14 @@ Use the provided `environment.yml`. Note that you need to set the `anaconda_dir`
 conda env create -f environment.yml
 ```
 
-After setup your environment, don’t forget to activate it
+After setting up your environment, don’t forget to activate it
 
 ```shell
 conda activate l3das22
 ```
 
 ## Dataset
-Download dataset is easy. Directly run
+Downloading the dataset is easy. Directly run
 ```shell
 sh scripts/download.sh
 ```
@@ -81,13 +81,13 @@ Hyper-parameters are stored in `./configs/ein_seld/seld.yaml`. You can change so
 
 ### 1. Preprocessing
 
-It is needed to preprocess the data and label files. `.wav` files will be saved to `.h5` files. Label files will be preprocessed to track labels (`.h5` files) for training and frame labels (`.csv` file) for evaluating. SALSA features are extracted offline (while preprocessing), and logmel&IV features are extracted online (while runing codes). After downloading the data, directly run
+It is needed to preprocess the data and label files. `.wav` files will be saved to `.h5` files. Label files will be preprocessed to track labels (`.h5` files) for training and frame labels (`.csv` file) for evaluating. SALSA features are extracted offline (while preprocessing), and logmel&IV features are extracted online (while running codes). After downloading the data, directly run
 
 ```sh
 sh ./scripts/preprocess.sh
 ```
 
-Preprocessing for track labels separate labels to different tracks, each with up to one event and a corresponding DoA. The same event is consistently put in the same track. Mode details about track permutation invariant training (PIT) and Event Independent Network (EIN) are described in [2,3].
+Preprocessing for track labels separate labels into different tracks, each with up to one event and a corresponding DoA. The same event is consistently put in the same track. More details about track permutation invariant training (PIT) and Event Independent Network (EIN) are described in [2,3].
 
 ### 2. Traning
 
@@ -97,23 +97,23 @@ To train a model yourself, setup  `./configs/ein_seld/seld.yaml` and directly ru
 sh ./scripts/train.sh
 ```
 
-`train_set` and `valid_set` in `./configs/ein_seld/seld.yaml` means using what set type to train and validate. Note that `tain_set` can be `train` or `train&dev`, `valid_set` can be `None` which means no validation is needed.
+`train_set` and `valid_set` in `./configs/ein_seld/seld.yaml` means using what set type to train and validate. Note that `tain_set` can be `train` or `train&dev`, and `valid_set` can be `None` which means no validation is needed.
 
 `--seed` is set to a random integer by default. You can set it to a fixed number. Results will not be completely the same if RNN or Transformer is used.
 
 `--num_workers` affects the training speed, adjust it according to your resources.
 
-The training is on two NVIDIA Geforce RTX 3090 GPUs. If you have GPU memory error, try to reduce the batch size. Only training with GPU is supported.
+The training is on two NVIDIA Geforce RTX 3090 GPUs. If you have a GPU memory error, try to reduce the batch size. Only training with GPU is supported.
 
 ### 3. Inference
 
-Inference predicts results and save to `./out_infer` folder. The saved results is the submission result for L3DAS22 challenge. Directly run
+Inference predicts results and saves to `./out_infer` folder. The saved results are the submission result for the L3DAS22 challenge. Directly run
 
 ```sh
 sh ./scripts/infer.sh
 ```
 
-Inference predicts results on `testset_type` set, which can be `dev`, `test`, or `train`.
+Inference predicts results on the `testset_type` set, which can be `dev`, `test`, or `train`.
 
 ### 4. Evaluation
 
@@ -165,7 +165,7 @@ If you have any question, please email to hujinbo2019@gmail.com or report an iss
 
 If you came across out of memory error, then try to reduce the batch size.
 
-After downloading, you can delete downloaded_packages folder to save some space.
+After downloading, you can delete the downloaded_packages folder to save some space.
 
 ## Cite
 
@@ -208,4 +208,4 @@ Other codes may be helpful:
 
 2. https://github.com/thomeou/SALSA
 
-#  
+3. https://github.com/Jinbo-Hu/L3DAS22-TASK2
